@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.top-page {
+  display: block;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  /* border: 1px solid black; */
+}
+
+/* .top-page > :nth-child(1) {
+  position: absolute;
+  left: 20%;
+  bottom: auto;
+  top: -75%;
+  right: auto;
+  width: 90vw;
+  height: 80vw;
+  z-index: -1;
+  display: block;
+  border-radius: 100px;
+  background-color: #f2faff;
+  transform: rotate(-23deg);
+  box-sizing: border-box;
+} */
+
+.top-content {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  padding: 0 40px;
+  /* justify-content: space-evenly; */
+}
+
+.top-content > :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.top-content > :nth-child(1) > h1 {
+  font-family: "Open Sans", sans-serif;
+  color: #4c525a;
+  font-size: 44px;
+  line-height: 57.2px;
+}
+.top-content > :nth-child(1) > :nth-child(2) {
+  width: 75%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #4c525a;
+  line-height: 28px;
+  font-size: 20px;
+}
+.top-content > :nth-child(2) {
+  width: 50%;
+  display: flex;
+  margin: auto;
+}
+
+.top-content > :nth-child(2) > img {
+  width: 100%;
+  align-self: flex-end;
+}
+
+.topbuttons > :nth-child(1) {
+  padding: 30px;
+  border: 2px solid #00b289;
+  background-color: transparent;
+  margin-top: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 17px;
+  color: #4c525a;
+}
+.topbuttons > :nth-child(2) {
+  padding: 30px;
+  border: 2px solid #00b289;
+  background-color: #00b289;
+  margin-top: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 600;
+}
+.topbuttons > :nth-child(2):hover {
+  cursor: pointer;
+  background-color: #03906f;
+  border: 2px solid #03906f;
+}
+
+.top-desc {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  padding: 40px 40px;
+}
+
+.top-desc > h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  line-height: 44.8px;
+  color: #4c525a;
+}
+
+.top-desc > :nth-child(2) {
+  width: 55%;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  line-height: 30.8px;
+  text-align: center;
+  color: #4c525a;
+}
+
+.top-desc > :nth-child(3) {
+  margin: 40px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.desc-grid > div {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  line-height: 30.8px;
+  font-weight: 600;
+  text-align: center;
+}
+.desc-grid > div > div {
+  padding-bottom: 50px;
+}
+.mid-section {
+  display: block;
+  padding: 40px 0px;
+}
+
+.main-sec {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  padding: 0px 40px;
+}
+.vertical-tabs {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  /* margin: 70px 0px 0px; */
+  /* border: 1px solid blue; */
+}
+.vertical-tabs > div {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+  /* margin: 0px 0px -1px; */
+  padding: 22px 20px;
+  background: #fff;
+  border-bottom: 1px solid #d7d8d9;
+}
+
+.vertical-tabs > div > h4 {
+  font-size: 22px;
+  font-family: "Lato", sans-serif;
+  margin: 0px;
+}
+
+.vertical-tabs > :nth-child(3) > img {
+  width: 13%;
+}
+.vertical-tabs > div:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+}
+.tab-content {
+  width: 60%;
+  /* border: 1px solid red; */
+  margin: 0px auto;
+}
+.tab-content > div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.tab-content > div > h2 {
+  font: "Open Sans", sans-serif;
+  font-size: 32px;
+  color: #4c525a;
+}
+.tab-content > div > :nth-child(2) {
+  font-family: "lato", sans-serif;
+  font-size: 22px;
+  color: #4c525a;
+  line-height: 30.8px;
+  text-align: start;
+}
+.tab-content > div > :nth-child(3) {
+  font-family: "lato", sans-serif;
+  font-size: 16px;
+  color: #00b289;
+  margin-top: 20px;
+  text-align: start;
+}
+.tab-content > img {
+  display: block;
+  width: 100%;
+}

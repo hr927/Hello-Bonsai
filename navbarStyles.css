@@ -1,0 +1,200 @@
+#navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  background-color: #fff;
+}
+#navbar img {
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  max-width: 100%;
+  cursor: pointer;
+}
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px 34.7969px 0px 0px;
+  /* border: 1px solid black; */
+}
+#menu > a {
+  color: #4c4d5f;
+  font-size: 17px;
+  margin-right: 40px;
+  padding: 16px 8px 16px 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: visible;
+}
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: #4c4d5f;
+  font-size: 17px;
+  background-color: inherit;
+  font-family: inherit;
+  padding: 16px 8px 16px 0px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.drop-content {
+  display: none;
+  position: absolute;
+  left: 30%;
+  top: 80%;
+  background-color: white;
+  color: #4c4d5f;
+  max-width: 350px;
+  z-index: 1;
+  flex: 0 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+}
+.drop-temp {
+  display: none;
+  position: absolute;
+  left: 40%;
+  top: 80%;
+  background-color: inherit;
+  color: #4c4d5f;
+  max-width: 350px;
+  z-index: 1;
+  flex: 0 0 auto;
+  background-color: inherit;
+  box-sizing: border-box;
+  box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+}
+.drop-content a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  color: #4c4d5f;
+  width: 100%;
+  background-color: #fff;
+  align-items: flex-start;
+}
+
+.drop-content a > :nth-child(1) {
+  padding: 10px 25px 1px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.drop-content a > :nth-child(2) {
+  padding: 5px 25px 10px;
+  font-size: 17px;
+  font-weight: 400;
+  border-bottom: 1px solid #d7d8d9;
+}
+.drop-content a:hover {
+  background-color: #f6f6f6;
+}
+
+.dropdown:hover .drop-content {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0 0 auto;
+  font-size: 17px;
+  line-height: 22px;
+  align-items: flex-start;
+  background-color: white;
+  box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+  /* border: 1px solid black; */
+}
+.dropdown:hover .drop-temp {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  /* flex: 0 0 auto; */
+  font-size: 15px;
+  line-height: 22px;
+  align-items: flex-start;
+  background-color: #fff;
+  box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+  /* border: 1px solid black; */
+}
+.drop-temp > a {
+  float: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 15px;
+  color: #4c4d5f;
+  width: 100%;
+  background-color: #fff;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.drop-temp > a:hover {
+  background-color: rgb(246, 243, 243);
+}
+.drop-temp > a > :nth-child(1) {
+  width: 5%;
+  /* margin: auto; */
+  /* margin-left: 20px; */
+}
+.drop-temp > a > :nth-child(2) {
+  width: 80%;
+  /* margin: auto; */
+}
+.navButtons {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.navButtons > a {
+  margin-left: 15px;
+  padding: 12px 0px 9px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navButtons > :nth-child(1) {
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 1px solid #00b289;
+  background-color: transparent;
+  color: #00b289;
+}
+.navButtons > :nth-child(1):hover {
+  background-color: #00b299;
+  color: #fff;
+}
+
+.navButtons > :nth-child(2) {
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 1px solid #00b289;
+  background-color: #00b289;
+  color: #fff;
+}
+
+.navButtons > :nth-child(2):hover {
+  border: 1px solid #03906f;
+  background-color: #03906f;
+}

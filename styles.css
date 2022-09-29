@@ -299,3 +299,43 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #4c525a;
 }
+
+.bottom-section {
+  padding: 40px 0px;
+}
+.bottom-section > div {
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 48px;
+  background: #f2faff;
+  border-radius: 10px;
+}
+.bottom-section > div > :nth-child(1) {
+  font-size: 44px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 57.2px;
+  color: #4c525a;
+  font-weight: 700;
+}
+.bottom-section > div > :nth-child(1) > span {
+  color: #01b289;
+}
+
+.bottom-section > div > :nth-child(2) {
+  padding: 10px 25px;
+  border: 2px solid #00b289;
+  background-color: #00b289;
+  /* margin-top: 50px; */
+  border-radius: 5px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bottom-section > div > :nth-child(2):hover {
+  background-color: #03906f;
+  border: 2px solid #03906f;
+}

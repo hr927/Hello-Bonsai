@@ -20,21 +20,22 @@ body {
   /* border: 1px solid black; */
 }
 
-/* .top-page > :nth-child(1) {
+.top-page > :nth-child(1) {
+  width: 100%;
+  margin: auto;
   position: absolute;
-  left: 20%;
-  bottom: auto;
+  left: 32%;
   top: -75%;
-  right: auto;
-  width: 90vw;
-  height: 80vw;
+  width: 1000px;
+  height: 1500px;
   z-index: -1;
   display: block;
   border-radius: 100px;
   background-color: #f2faff;
   transform: rotate(-23deg);
   box-sizing: border-box;
-} */
+  overflow: hidden;
+}
 
 .top-content {
   display: flex;
@@ -148,7 +149,22 @@ body {
   display: block;
   padding: 40px 0px;
 }
-
+.mid-section > :nth-child(1) {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  left: 52%;
+  top: 145%;
+  width: 700px;
+  height: 700px;
+  z-index: -1;
+  display: block;
+  border-radius: 50%;
+  background-color: #fff5e8;
+  transform: rotate(23deg);
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .main-sec {
   width: 70%;
   margin: auto;

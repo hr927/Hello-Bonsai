@@ -219,3 +219,68 @@ body {
   display: block;
   width: 100%;
 }
+
+.mid-trust {
+  display: block;
+  width: 70%;
+  margin: auto;
+  padding: 40px 0px;
+}
+.trust-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0px 40px;
+}
+.trust-container > :nth-child(1) {
+  margin: auto;
+  width: 50%;
+  /* border: 1px solid black; */
+}
+
+.trust-container > :nth-child(1) > h2 {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: #4c525a;
+  text-align: center;
+  line-height: 44.8px;
+}
+.trust-container > :nth-child(1) > div {
+  text-align: center;
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "lato", sans-serif;
+  color: #4c525a;
+}
+.trust-container > :nth-child(2) {
+  display: grid;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  /* border: 1px solid blue; */
+}
+.trust-container > :nth-child(2) > div {
+  display: flex;
+  margin: auto;
+  width: 65%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.trust-container > :nth-child(2) > div > :nth-child(1) {
+  margin-bottom: 32px;
+}
+.trust-container > :nth-child(2) > div > :nth-child(2) {
+  font-size: 22px;
+  font-family: "lato", sans-serif;
+  line-height: 30.8px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4c525a;
+}
+.trust-container > :nth-child(2) > div > :nth-child(3) {
+  font-size: 16px;
+  font-family: "lato", sans-serif;
+  line-height: 20px;
+  color: #4c525a;
+}

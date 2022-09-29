@@ -284,3 +284,18 @@ body {
   line-height: 20px;
   color: #4c525a;
 }
+.testimonials {
+  padding: 70px 0px;
+}
+
+.tcontainer {
+  padding: 0px 40px;
+}
+
+.tcontainer > h2 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 44.8px;
+  font-family: "Open Sans", sans-serif;
+  color: #4c525a;
+}

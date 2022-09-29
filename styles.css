@@ -153,7 +153,8 @@ body {
   width: 70%;
   margin: auto;
   display: flex;
-  padding: 0px 40px;
+  justify-content: space-between;
+  /* padding: 0px 40px; */
 }
 .vertical-tabs {
   width: 20%;
@@ -180,16 +181,15 @@ body {
 }
 
 .vertical-tabs > :nth-child(3) > img {
-  width: 13%;
+  width: 11%;
 }
 .vertical-tabs > div:hover {
   background-color: #fff;
   box-shadow: 0 1px 60px 0 rgb(2 4 69 / 10%);
+  cursor: pointer;
 }
 .tab-content {
-  width: 60%;
-  /* border: 1px solid red; */
-  margin: 0px auto;
+  width: 50%;
 }
 .tab-content > div {
   width: 45%;
@@ -199,6 +199,7 @@ body {
 .tab-content > div > h2 {
   font: "Open Sans", sans-serif;
   font-size: 32px;
+  line-height: 44.8px;
   color: #4c525a;
 }
 .tab-content > div > :nth-child(2) {
@@ -214,10 +215,12 @@ body {
   color: #00b289;
   margin-top: 20px;
   text-align: start;
+  cursor: pointer;
 }
 .tab-content > img {
   display: block;
   width: 100%;
+  /* border: 2px solid red; */
 }
 
 .mid-trust {
@@ -353,7 +356,7 @@ body {
   width: 15%;
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .footer_block > :nth-child(1) {

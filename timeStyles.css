@@ -115,3 +115,60 @@ body {
   background-color: #03906f;
   border: 2px solid #03906f;
 }
+
+.top-desc {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.top-desc > :nth-child(1) {
+  margin: auto;
+  max-width: 900px;
+}
+.top-desc > :nth-child(1) > h2 {
+  font-size: 32px;
+  line-height: 44.8px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #4c525a;
+}
+.top-desc > :nth-child(1) > h2 > span {
+  color: #00b289;
+  cursor: pointer;
+}
+.topdesc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px auto 0px;
+}
+.topdesc-grid > div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-between;
+  text-align: left;
+  margin: 0 auto;
+}
+.topdesc-grid > div > img {
+  width: 40%;
+  display: block;
+  margin-bottom: 15px;
+}
+.top-desc > :nth-child(2) > div > :nth-child(2) {
+  font-size: 24px;
+  font-family: "lato", sans-serif;
+  line-height: 28.8px;
+  color: #4c525a;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.top-desc > :nth-child(2) > div > :nth-child(3) {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #4c525a;
+}

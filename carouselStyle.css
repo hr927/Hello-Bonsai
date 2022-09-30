@@ -73,18 +73,18 @@
 .tslide > div > div > :nth-child(1) {
   font-size: 22px;
   line-height: 30.8px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .tslide > div > div > :nth-child(2) {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .tslide > div > div > :nth-child(3) {
   font-size: 20px;
   line-height: 28px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .carousel_nav {
   display: flex;

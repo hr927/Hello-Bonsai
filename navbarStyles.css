@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&display=swap");
 #navbar {
   width: 100%;
   display: flex;
@@ -8,6 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   position: fixed;
+
   z-index: 1;
   background: #fff;
   background-color: #fff;
@@ -34,6 +36,8 @@
   margin-right: 40px;
   padding: 16px 8px 16px 0px;
   text-decoration: none;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
   cursor: pointer;
 }
 
@@ -46,6 +50,8 @@
   outline: none;
   color: #4c4d5f;
   font-size: 17px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
   background-color: inherit;
   font-family: inherit;
   padding: 16px 8px 16px 0px;
@@ -73,6 +79,7 @@
   top: 80%;
   background-color: inherit;
   color: #4c4d5f;
+  font-family: "Lato", sans-serif;
   max-width: 350px;
   z-index: 1;
   flex: 0 0 auto;
@@ -85,6 +92,7 @@
   text-decoration: none;
   display: block;
   margin: auto;
+  font-family: "Lato", sans-serif;
   color: #4c4d5f;
   width: 100%;
   background-color: #fff;
@@ -94,11 +102,13 @@
 .drop-content a > :nth-child(1) {
   padding: 10px 25px 1px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
 }
 .drop-content a > :nth-child(2) {
   padding: 5px 25px 10px;
   font-size: 17px;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid #d7d8d9;
 }
@@ -113,6 +123,7 @@
   justify-content: space-evenly;
   flex: 0 0 auto;
   font-size: 17px;
+  font-family: "Lato", sans-serif;
   line-height: 22px;
   align-items: flex-start;
   background-color: white;
@@ -124,6 +135,7 @@
   display: flex;
   flex-direction: column;
   /* flex: 0 0 auto; */
+  font-family: "Lato", sans-serif;
   font-size: 15px;
   line-height: 22px;
   align-items: flex-start;
@@ -140,6 +152,7 @@
   margin-top: 15px;
   color: #4c4d5f;
   width: 100%;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   align-items: flex-start;
   justify-content: space-around;
@@ -168,6 +181,7 @@
   border-radius: 5px;
   font-size: 13px;
   line-height: 15px;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -178,7 +192,9 @@
   padding-right: 20px;
   padding-left: 20px;
   border: 1px solid #00b289;
+  font-family: "Lato", sans-serif;
   background-color: transparent;
+  letter-spacing: 0.6px;
   color: #00b289;
 }
 .navButtons > :nth-child(1):hover {
@@ -191,6 +207,8 @@
   padding-left: 20px;
   border: 1px solid #00b289;
   background-color: #00b289;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.6px;
   color: #fff;
 }
 

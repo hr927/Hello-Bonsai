@@ -64,6 +64,7 @@
   margin: 0 12px;
   font-size: 25px;
   text-align: center;
+  cursor: pointer;
 
   border: 1px solid #4c525a;
 }
@@ -103,15 +104,19 @@
 .tslide > div {
   display: flex;
   justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.tslide > div > a {
   padding: 20px;
   font-size: 18px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: left;
   line-height: 27px;
   color: #00b289;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  text-decoration: none;
+  /* cursor: pointer; */
 }
 .explore-sec {
   width: 70%;
@@ -154,7 +159,7 @@
 .heading-sec + div > a > div > :nth-child(1) {
   margin-bottom: 20px;
   font-size: 22px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: start;
   line-height: 30.8px;
   font-weight: 600;
@@ -162,7 +167,7 @@
 }
 .heading-sec + div > a > div > :nth-child(2) {
   font-size: 16px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: start;
   line-height: 20px;
   color: #4c525a;

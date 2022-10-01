@@ -56,6 +56,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   line-height: 20px;
+  padding: 10px;
   /* text-align: center; */
 }
 .left-cont > :nth-child(1) > :nth-child(1) {
@@ -67,6 +68,7 @@
 }
 .left-cont > :nth-child(2) {
   display: flex;
+  padding: 10px;
   flex-direction: column;
 }
 .left-cont > :nth-child(2) > :nth-child(1) {
@@ -88,6 +90,7 @@
   font-weight: 600;
 }
 .right-cont {
+  width: 500px;
   display: block;
   box-sizing: border-box;
   padding: 30px;
@@ -214,7 +217,7 @@ select {
   color: #292a2d;
 }
 
-form > button {
+input[type="submit"] {
   width: 100%;
   padding: 10px 10px 9px;
   background-color: #00b289;

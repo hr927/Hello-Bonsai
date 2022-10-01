@@ -3,6 +3,19 @@ let slides = Array.from(track.children);
 // console.log(slides);
 let nextbtn = document.querySelector(".btn-right");
 let prevbtn = document.querySelector(".btn-left");
+let uEmail = localStorage.getItem("user-mail") || "";
+document.querySelector("form").addEventListener("submit", signUpfun);
+function signUpfun(event) {
+  event.preventDefault();
+  let umail = document.querySelector("#i_email").value;
+  if (umail === "") {
+    alert("Please enter your Email");
+  } else {
+    uEmail = umail;
+    localStorage.setItem("user-mail", uEmail);
+    window.location.href = "signup.html";
+  }
+}
 
 // console.log(nextbtn, prevbtn);
 

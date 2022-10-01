@@ -231,6 +231,7 @@ body {
   color: #00b289;
   margin-top: 20px;
   text-align: start;
+  text-decoration: none;
   cursor: pointer;
 }
 .tab-content > img {
@@ -352,6 +353,7 @@ body {
   font-size: 17px;
   color: #fff;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
 }
 .bottom-section > div > :nth-child(2):hover {

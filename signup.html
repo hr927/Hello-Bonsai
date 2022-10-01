@@ -59,11 +59,11 @@
             <div>
               <form action="">
                 <label for="">EMAIL</label>
-                <input type="email" placeholder="your@email.com" />
+                <input type="email" placeholder="your@email.com" id="u_email" />
                 <label for="">FULL NAME</label>
-                <input type="text" placeholder="Jane Smith" />
+                <input type="text" placeholder="Jane Smith" / id="u_name">
                 <label for="">PASSWORD</label>
-                <input type="password" placeholder="******" />
+                <input type="password" placeholder="******" / id="u_pass">
                 <p>Your password must be at least 6 characters</p>
                 <div class="country-curr">
                   <div>
@@ -138,3 +138,81 @@
     </div>
   </body>
 </html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", signUpFun);
+  let uEmail = localStorage.getItem("user-mail") || "";
+  if (uEmail != "") {
+    document.querySelector("#u_email").value = uEmail;
+  }
+  let userArr = JSON.parse(localStorage.getItem("user-Info")) || [];
+  function signUpFun(event) {
+    event.preventDefault();
+
+    let user_email = document.querySelector("#u_email").value;
+    let user_name = document.querySelector("#u_name").value;
+    let user_pass = document.querySelector("#u_pass").value;
+    let user_country = document.querySelector("#country").value;
+    let user_currency = document.querySelector("#currency").value;
+
+    if (
+      user_email === "" ||
+      user_name === "" ||
+      user_pass === "" ||
+      user_country === "" ||
+      user_currency === ""
+    ) {
+      alert("Please fill all the details.");
+    } else if (passStrength(user_pass)) {
+      let userObj = {
+        email: user_email,
+        name: user_name,
+        pass: user_pass,
+        country: user_country,
+        currency: user_currency,
+      };
+      userArr.push(userObj);
+      localStorage.setItem("user-Info", JSON.stringify(userArr));
+      alert("You can Login now!");
+      document.querySelector("#u_email").value = "";
+      document.querySelector("#u_name").value = "";
+      document.querySelector("#u_pass").value = "";
+      document.querySelector("#country").value = "";
+      document.querySelector("#currency").value = "";
+    }
+  }
+
+  function passStrength(el) {
+    let sAlpha = "abcdefghijklmnopqrstuvwxyz";
+    let uAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let nums = "1234567890";
+    let sacount = 0;
+    let uacount = 0;
+    let ncount = 0;
+    for (let i = 0; i < el.length; i++) {
+      for (let j = 0; j < sAlpha.length; j++) {
+        if (el[i] === sAlpha[j]) {
+          sacount++;
+          break;
+        }
+        if (el[i] === uAlpha[j]) {
+          uacount++;
+          break;
+        }
+      }
+      for (let k = 0; k < nums.length; k++) {
+        if (el[i] === nums[k]) {
+          ncount++;
+          break;
+        }
+      }
+    }
+    if (sacount === 0 || uacount === 0 || ncount === 0) {
+      alert(
+        "Please use an AlphaNumeric Password with lowercase and uppercase alphabets"
+      );
+    } else {
+      return true;
+    }
+  }
+</script>

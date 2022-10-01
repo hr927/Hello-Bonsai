@@ -305,6 +305,7 @@ body {
   border-radius: 5px;
   font-size: 17px;
   color: #fff;
+  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
 }

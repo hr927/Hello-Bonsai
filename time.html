@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="navbar">
-      <a href=""
+      <a href="Homepage.html"
         ><img
           src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg"
           alt=""
@@ -135,12 +135,13 @@
             Bonsai’s all-in-one product suite with smart automation lets you
             focus on your passion, not your paperwork.
           </div>
-          <div class="topbuttons">
-            <input type="email" placeholder="Enter your email" /><input
-              type="submit"
-              value="START FREE"
-            />
-          </div>
+          <form class="topbuttons">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="i_email"
+            /><input type="submit" value="START FREE" />
+          </form>
         </div>
         <div>
           <img
@@ -287,7 +288,7 @@
     <div class="bottom-sec">
       <div class="b-text">
         <div>Simplify your workflow with Bonsai time tracking.</div>
-        <div>START FREE</div>
+        <a href="signup.html"><div>START FREE</div></a>
       </div>
       <div class="b-link">
         <div>Available for download on the most popular platforms:</div>
@@ -387,3 +388,19 @@
     </div>
   </body>
 </html>
+
+<script>
+  let uEmail = localStorage.getItem("user-mail") || "";
+  document.querySelector("form").addEventListener("submit", signUpfun);
+  function signUpfun(event) {
+    event.preventDefault();
+    let umail = document.querySelector("#i_email").value;
+    if (umail === "") {
+      alert("Please enter your Email");
+    } else {
+      uEmail = umail;
+      localStorage.setItem("user-mail", uEmail);
+      window.location.href = "signup.html";
+    }
+  }
+</script>

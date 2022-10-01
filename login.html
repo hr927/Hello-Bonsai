@@ -24,7 +24,8 @@
     <div class="container">
       <h2>Sign In</h2>
       <div>
-        <a href=""
+        <a
+          href="https://app.hellobonsai.com/users/auth/google_oauth2?scope=email,profile&state=JTdCJTIyc2lnbnVwX29yaWdpbiUyMiUzQSUyMnNpZ24lMjBpbiUyMHBhZ2UlMjIlMkMlMjJyZWZlcnJlciUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGd3d3LmhlbGxvYm9uc2FpLmNvbSUyRiUyMiUyQyUyMnNpZ25fdXBfdXJsJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcHAuaGVsbG9ib25zYWkuY29tJTJGdXNlcnMlMkZzaWduX3VwJTIyJTJDJTIyY291bnRyeSUyMiUzQSUyMklOJTIyJTJDJTIyY3VycmVuY3klMjIlM0ElMjJJTlIlMjIlN0Q="
           ><div>
             <img src="https://sso.masaischool.com/google.svg" alt="" />
             &nbsp Sign Up with Google
@@ -37,8 +38,13 @@
       </div>
       <div>
         <form action="">
-          <input class="uinput" type="email" placeholder="Email" />
-          <input class="uinput" type="password" placeholder="Password" />
+          <input class="uinput" type="email" placeholder="Email" id="u_mail" />
+          <input
+            class="uinput"
+            type="password"
+            placeholder="Password"
+            id="u_pass"
+          />
           <div>
             <input type="checkbox" />
             <label for="">Remember me</label>
@@ -53,3 +59,35 @@
     </div>
   </body>
 </html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", logInFun);
+  let userdata = JSON.parse(localStorage.getItem("user-Info")) || [];
+  function logInFun(event) {
+    event.preventDefault();
+    let count = 0;
+    let i_mail = document.querySelector("#u_mail").value;
+    let i_pass = document.querySelector("#u_pass").value;
+    if (i_mail === "" || i_pass === "") {
+      alert("Please enter the required infromation");
+    } else {
+      for (let i = 0; i < userdata.length; i++) {
+        if (i_mail === userdata[i].email && i_pass === userdata[i].pass) {
+          count++;
+          break;
+        }
+      }
+      if (count > 0) {
+        alert("Login Successful");
+        myFun();
+      } else {
+        alert("Invalid Credentials");
+      }
+    }
+  }
+  function myFun() {
+    // document.querySelector("form").setAttribute("action", "Homepage.html");
+    // console.log(document.querySelector("form").action);
+    window.location.href = "Homepage.html";
+  }
+</script>

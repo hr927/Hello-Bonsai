@@ -1,5 +1,18 @@
 let tabs = document.querySelectorAll(".vertical-tabs > div");
 // console.log(tabs[0].children[1].innerText);
+let uEmail = localStorage.getItem("user-mail") || "";
+document.querySelector("form").addEventListener("submit", signUpfun);
+function signUpfun(event) {
+  event.preventDefault();
+  let umail = document.querySelector("#i_email").value;
+  if (umail === "") {
+    alert("Please enter your Email");
+  } else {
+    uEmail = umail;
+    localStorage.setItem("user-mail", uEmail);
+    window.location.href = "signup.html";
+  }
+}
 tabs.forEach(function (el) {
   el.addEventListener("click", function () {
     myFun(el);
@@ -14,6 +27,7 @@ let contentObj = [
       "With just a few clicks, you can craft structured proposals with clear estimates to close your deals faster.",
     linkCon: "EXPLORE PROPOSALS",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6050acdd031b9f58db100f72_Graphic_Proposal-opt.png",
+    link: "proposals.html",
   },
   {
     id: "Contracts",
@@ -22,6 +36,7 @@ let contentObj = [
       "Simply answer a few questions to generate an already vetted contract template. Once you hit send, the contract can be e-signed in minutes.",
     linkCon: "EXPLORE CONTRACTS",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6050ad775d1c278c443c76d6_Graphic_Contact-opt.png",
+    link: "proposals.html",
   },
   {
     id: "Client CRM",
@@ -30,6 +45,7 @@ let contentObj = [
       "Manage your clients and ongoing projects all in one place. Organize all the documents, files and payments together for you and your client.",
     linkCon: "EXPLORE PROJECTS",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c5ad3feb65b_Graphic_Projects-min.png",
+    link: "proposals.html",
   },
   {
     id: "Time Tracking",
@@ -38,6 +54,7 @@ let contentObj = [
       "Easily track the time you're working, automatically populate timesheets and seamlessly switch between your projects for the day.",
     linkCon: "EXPLORE TIME TRACKING",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c4dc9feb654_Graphic_Track%20time-min.png",
+    link: "time.html",
   },
   {
     id: "Invoices",
@@ -46,6 +63,7 @@ let contentObj = [
       "Create and customize invoices, receive updates about payment timelines, and have automatic payment reminders sent on your behalf.",
     linkCon: "EXPLORE INVOICES",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/60241fc5e974b72f0865513b_Graphic_Invoice-min.png",
+    link: "proposals.html",
   },
   {
     id: "Task Tracking",
@@ -54,6 +72,7 @@ let contentObj = [
       "Give your day more structure with simple task management on your projects. Track time for each task and stay up-to-date.",
     linkCon: "EXPLORE TASKS",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6050aec11e1747965bfc16a5_task-management-graphic-opt.png",
+    link: "proposals.html",
   },
   {
     id: "Accounting & Taxes",
@@ -62,6 +81,7 @@ let contentObj = [
       "Don't worry about freelance finances when you have automatic expense tracking, income reporting and estimated tax planning.",
     linkCon: "EXPLORE ACCOUNTING & TAXES",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6050af07c36c35952ad19fbe_Graphic_Accounting-opt.png",
+    link: "proposals.html",
   },
   {
     id: "Forms",
@@ -70,6 +90,7 @@ let contentObj = [
       "Create your own customized forms and questionnaires for clieants and kicking off new projects",
     linkCon: "EXPLORE FORMS",
     img: "https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6050af50cd2ff1fc7708d532_home-forms-opt.png",
+    link: "proposals.html",
   },
 ];
 let content = document.querySelector(".tab-content");
@@ -86,8 +107,9 @@ function myFun(el) {
       conhead.innerText = e.conHead;
       let contex = document.createElement("div");
       contex.innerText = e.textCon;
-      let conlink = document.createElement("div");
+      let conlink = document.createElement("a");
       conlink.innerText = e.linkCon;
+      conlink.href = e.link;
       let conImg = document.createElement("img");
       conImg.src = e.img;
       contDiv.append(conhead, contex, conlink);
